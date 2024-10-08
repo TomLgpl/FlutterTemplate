@@ -1,5 +1,6 @@
-import 'package:flutter_template/model/mvvm/event_observer.dart';
+import 'package:flutter_template/model/mvvm/widget_event_observer.dart';
 import 'package:flutter_template/model/mvvm/view_event.dart';
+import 'package:flutter_template/model/mvvm/view_events/update_view_event.dart';
 
 abstract class EventViewModel {
   final List<EventObserver> _observerList = List.empty(growable: true);
@@ -18,7 +19,7 @@ abstract class EventViewModel {
     }
   }
 
-  void notify(ViewEvent? event) {
+  void notify([ViewEvent event = const UpdateViewEvent()]) {
     for (var element in _observerList) {
       element.notify(event);
     }

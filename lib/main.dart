@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/pages/example/example_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Template'),
-        ),
-        body: const Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: ExamplePage(),
     );
   }
 }
