@@ -1,6 +1,19 @@
 # flutter_template
 
-My personal template when starting a new flutter project
+My personal template when starting a new flutter project. It includes a dependency injection system (get_it), a folder architecture and a model-viewmodel-view implementation for flutter.
+
+## Quick start 
+
+- Launch with provider Dummy : `flutter run -t ./lib/main_dummy.dart`
+- Launch with provider Live : `flutter run -t ./lib/main_live`
+
+## Providers
+
+This template use two providers to split the repositories in case you are not in the same environment. There are two providers that are not implemented : 
+- Live : Which take a baseUrl to communicate with an api
+- Dummy : Which use static string to simulate the communication to the api
+
+To split this behavior, each provider instantiate their own repositories in their provider file (dummy will instantiate the DummyExampleRepository and live will instantiate the LiveExampleRepository).
 
 ## Folders
 
@@ -24,13 +37,17 @@ Pages contains every pages of the app. It's a screen the user will see containin
 
 Every pages should at least have a ViewModel.
 
+### Providers
+
+The providers help you splitting your code behavior depending of the environment.
+
 ### Repositories
 
 Every repository give you a way to retrieve data and create data class with it. They can only be called from Services.
 
 ### Services
 
-Every services helps you calling repositories and transformers to retrieve data as you want;
+Every services helps you calling repositories and transformers to retrieve data as you want.
 
 ### Transformers 
 
