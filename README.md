@@ -23,7 +23,8 @@ Components are used to store small widget that can be reused by any page or dial
 
 They can be either :
 - An atom : A small widget
-- A molecule : A widget containing other atoms
+- A molecule : A widget containing atoms
+- An organism : A widget containing molecules
 
 If a component behavior become too big, there should be a ViewModel with it
 
