@@ -5,7 +5,7 @@ My personal template when starting a new flutter project. It includes a dependen
 ## Quick start 
 
 - Launch with provider Dummy : `flutter run -t ./lib/main_dummy.dart`
-- Launch with provider Live : `flutter run -t ./lib/main_live`
+- Launch with provider Live : `flutter run -t ./lib/main_live.dart`
 
 ## Providers
 
