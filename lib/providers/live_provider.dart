@@ -1,6 +1,6 @@
 import 'package:flutter_template/providers/provider.dart';
-import 'package:flutter_template/repositories/example/example_repository.dart';
-import 'package:flutter_template/repositories/example/live_example_repository.dart';
+import 'package:flutter_template/services/example/example_service.dart';
+import 'package:flutter_template/services/example/live_example_service.dart';
 
 class LiveProvider extends Provider {
   String baseUrl;
@@ -8,8 +8,8 @@ class LiveProvider extends Provider {
   LiveProvider(this.baseUrl);
 
   @override
-  initRepositories() {
-    super.initRepositories();
-    getIt.registerSingleton<ExampleRepository>(LiveExampleRepository(baseUrl));
+  initServices() {
+    super.initServices();
+    getIt.registerSingleton<ExampleService>(LiveExampleService(baseUrl));
   }
 }

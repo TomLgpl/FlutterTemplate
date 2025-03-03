@@ -42,17 +42,17 @@ Every pages should at least have a ViewModel.
 
 The providers help you splitting your code behavior depending of the environment.
 
-### Repositories
-
-Every repository give you a way to retrieve data and create data class with it. They can only be called from Services.
-
 ### Services
 
-Every services helps you calling repositories and transformers to retrieve data as you want.
+Every services give you a way to retrieve data and create data class with it. They can only be called from Repositories.
+
+### Repositories
+
+Every repositories helps you calling services and transformers to retrieve data as you want.
 
 ### Transformers 
 
-Transformers let you transform data, from one class to an another. They can only be called from Services.
+Transformers let you transform data, from one class to an another. They can only be called from Repositories.
 
 ### Utils
 
@@ -65,16 +65,16 @@ flowchart LR
     Page
     ViewModel
     Component
-    Service
-    Transformer
     Repository
+    Transformer
+    Service
     DataClass[Data class]
     Page<-->ViewModel
     Page<-->Component
-    ViewModel-->Service
-    Service-->Transformer
-    Service-->Repository
+    ViewModel-->Repository
+    Repository-->Transformer
+    Repository-->Service
     Component .->ViewModel
-    Repository-- Create -->DataClass
+    Service-- Create -->DataClass
     Transformer-- Transform -->DataClass
 ```

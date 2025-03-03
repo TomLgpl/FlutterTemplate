@@ -1,9 +1,9 @@
-import 'package:flutter_template/repositories/example/example_repository.dart';
+import 'package:flutter_template/services/example/example_service.dart';
 
-class LiveExampleRepository extends ExampleRepository {
+class LiveExampleService extends ExampleService {
   String baseUrl;
 
-  LiveExampleRepository(this.baseUrl);
+  LiveExampleService(this.baseUrl);
 
   @override
   Future<Map<String, dynamic>> fetchExampleData() async {

@@ -1,13 +1,13 @@
 import 'package:flutter_template/providers/provider.dart';
-import 'package:flutter_template/repositories/example/dummy_example_repository.dart';
-import 'package:flutter_template/repositories/example/example_repository.dart';
+import 'package:flutter_template/services/example/dummy_example_service.dart';
+import 'package:flutter_template/services/example/example_service.dart';
 
 class DummyProvider extends Provider {
   DummyProvider();
 
   @override
-  initRepositories() {
-    super.initRepositories();
-    getIt.registerSingleton<ExampleRepository>(DummyExampleRepository());
+  initServices() {
+    super.initServices();
+    getIt.registerSingleton<ExampleService>(DummyExampleService());
   }
 }
